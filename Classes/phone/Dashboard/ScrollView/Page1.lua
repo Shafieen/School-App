@@ -9,6 +9,7 @@ function DefaultClass:init(config)
 	local bottom = display.newGroup(); bottom.isVisible = true
 	bottom.x, bottom.y = 0,0
 
+	print('Adding pg1 to disp:',config.disp)
 	local disp = config.disp or display.getCurrentStage()
 	self.disp = disp; disp:insert(group)
 
@@ -293,12 +294,17 @@ function DefaultClass:init(config)
 	touchArea8:addEventListener('touch', self)
 	--opens up mail app
 
+<<<<<<< HEAD
 	--group:addEventListener('touch', self)
+=======
+	-- group:addEventListener('touch', self)
+>>>>>>> c0884117390684d137f729e7418bef4a2b1c6d2a
 	scope:addEventListener('onScopeEvent', self)
 end
 
 function DefaultClass:touch(e)
 	local phase = e.phase
+	print('Page1 touch',phase,self.disp)
 	if (e.phase == 'began') then
 		local target = e.target
 		if (target == self.link1) then

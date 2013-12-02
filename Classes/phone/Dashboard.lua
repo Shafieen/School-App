@@ -12,8 +12,14 @@ function DefaultClass:init(config)
 	local scope = config.scope or disp
 	self.scope = scope
 
+<<<<<<< HEAD
 	require('Classes.phone.Dashboard.ScrollView'):init({disp=group, scope=scope})
 	require('Classes.phone.Dashboard.Scrollview.Page1'):init({disp=group, scope=scope})
+=======
+	local sv = require('Classes.phone.Dashboard.ScrollView'):init({disp=group, scope=scope})
+	require('Classes.phone.Dashboard.Scrollview.Page1'):init({disp=sv, scope=scope})
+	-- require('Classes.phone.Dashboard.Scrollview.Page2'):init({disp=sv, scope=scope})
+>>>>>>> c0884117390684d137f729e7418bef4a2b1c6d2a
 
 	scope:addEventListener('onScopeEvent', self)
 

@@ -83,10 +83,13 @@ function DefaultClass:init(config)
 
 	group:addEventListener('touch', self)
 	scope:addEventListener('onScopeEvent', self)
+	print('scrollview group:',self.group)
+	return group
 end
 
 function DefaultClass:touch(e)
 	local phase = e.phase
+	print('Scrollview touch',phase,self.group)
 	if (phase == 'began') then
 		local group = self.group
 		if (self.moveTrans) then transition.cancel(self.moveTrans); self.moveTrans = nil end
