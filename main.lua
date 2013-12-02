@@ -18,8 +18,10 @@ end
 
 Runtime:addEventListener('system', system)
 
-require('Classes.Utils.Performance')
+--require('Classes.Utils.Performance')
 require('Classes.Utils.Class')
 local storyboard = require "storyboard"
+
+--local arch = system.getInfo('architectureInfo')
 
 storyboard:gotoScene('view1')

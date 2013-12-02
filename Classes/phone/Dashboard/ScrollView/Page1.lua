@@ -293,7 +293,7 @@ function DefaultClass:init(config)
 	touchArea8:addEventListener('touch', self)
 	--opens up mail app
 
-	group:addEventListener('touch', self)
+	--group:addEventListener('touch', self)
 	scope:addEventListener('onScopeEvent', self)
 end
 

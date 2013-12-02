@@ -4,6 +4,7 @@ application = {
 		height = 480, 
 		scale = "letterBox",
 		fps = 60,
+        graphicsCompatibility = 1  -- Turn on V1 Compatibility Mode
 		
 		--[[
         imageSuffix = {

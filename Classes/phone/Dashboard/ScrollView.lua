@@ -99,12 +99,15 @@ function DefaultClass:touch(e)
 		local dx, dy = x-xStart, y-yStart
 		local dxAbs = math.abs(dx)
 
+		--if(dx > 0) then
+
 		if (dxAbs > 7) then
 			local group = self.group
 			group.x = self.xInit + dx
 			self.isMoving = true
 		print(dx,e.target)
 		end
+	--end
 	elseif (phase == 'ended') then
 		local target = e.target
 		if (self.isMoving) then
